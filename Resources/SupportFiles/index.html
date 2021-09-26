@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Title</title>
+</head>
+<body>
+
+  <button onclick="timedText()">Click me to start timer</button>
+
+  <p id="demo">Text changes here</p>
+ 
+ 
+ <button id="btn">Button</button>
+<br><br>
+
+<button onclick="disableBtn()">Disable</button>
+<button onclick="enableBtn()">Enable</button>
+ 
+  <script>
+  function timedText() {
+      setTimeout(myTimeout1, 2000)
+      setTimeout(myTimeout2, 4000)
+      setTimeout(myTimeout3, 10000)
+  }
+  function myTimeout1() {
+      document.getElementById("demo").innerHTML = "Selenium";
+  }
+  function myTimeout2() {
+      document.getElementById("demo").innerHTML = "Java";
+  }
+  function myTimeout3() {
+      document.getElementById("demo").innerHTML = "TestNG";
+  }
+  
+  function disableBtn() {
+  document.getElementById("btn").disabled = true;
+}
+
+function enableBtn() {
+  document.getElementById("btn").disabled = false;
+}
+  </script>
+
+</body>
+</html>

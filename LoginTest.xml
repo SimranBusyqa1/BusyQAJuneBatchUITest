@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Sanity Suite">
+    <test  name="Test">
+        <parameter name="browser" value="chrome" />
+        <parameter name="url" value="QA" />
+        <classes>
+            <class name="testCases_Login.TC_Login" />
+        </classes>
+    </test> <!-- Test -->
+
+</suite>

@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name = "MySanitySuite" >
+    <test  name ="MyTest">
+        <parameter name="browser" value="chrome" />
+        <parameter name="user" value="Simran" />
+        <parameter name="pass" value="abc123" />
+        <classes>
+            <class name="testCases_TestNG.Test_Parameter" />
+        </classes>
+    </test> <!-- Test -->
+
+</suite>

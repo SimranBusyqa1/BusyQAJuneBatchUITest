@@ -1,0 +1,8 @@
+configReader\ConfigReader.class
+listeners\TestListener.class
+excelReader\FilloUtility.class
+extentReporting\ExtentReportTestsTracker.class
+PageClasses\LoginPageClass.class
+testBase\BaseClass.class
+extentReporting\ExtentReportDefinition.class
+screenShot\ScreenshotTaken.class

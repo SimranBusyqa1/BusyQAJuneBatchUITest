@@ -5,9 +5,11 @@ import com.codoid.products.exception.FilloException;
 import com.codoid.products.fillo.Connection;
 import com.codoid.products.fillo.Fillo;
 import com.codoid.products.fillo.Recordset;
+import org.apache.log4j.Logger;
 
 
 public class FilloUtility {
+	public static final Logger log = Logger.getLogger(FilloUtility.class.getName());
 
 	ArrayList<String> column = new ArrayList<String>();
 	ArrayList<String> testData = new ArrayList<String>();
@@ -27,7 +29,7 @@ public class FilloUtility {
 		while (recordset.next()) {  // Condition till record set has values
 
 			column = recordset.getFieldNames(); // get column names => 3 (0,1, 2, 3)
-
+            log.info("I am in ExcelReader");
 			for (int i = 1; i <= column.size() - 1; i++) {  // run for loop for desired columns
 				testData.add(recordset.getField(column.get(i)));  // add row values to ArrayList
 			}

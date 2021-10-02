@@ -1,5 +1,7 @@
 package testBase;
 
+import configReader.ConfigReader;
+import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -11,26 +13,36 @@ import java.net.URLConnection;
 public class BaseClass {
 
     public static WebDriver driver;
+    public static String qaURL = ConfigReader.getValueFromPropertyFile("QAUrl");
+    public static String chromePath = ConfigReader.getValueFromPropertyFile("ChromePath");
+    public static String firefoxPath = ConfigReader.getValueFromPropertyFile("FirefoxPath");
 
     public static void init(String browser, String url){ // TC will be passing browser and url values
 
         if(browser.equalsIgnoreCase("chrome")){
 
-            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\Resources\\Drivers\\chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + chromePath);
             driver = new ChromeDriver(); // create instance of chromeDriver and assign to WebDriver ref. variable
 
         }
 
         else if(browser.equalsIgnoreCase("firefox")){
 
-            System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "\\Resources\\Drivers\\geckodriver.exe");
+            System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + firefoxPath);
             driver = new FirefoxDriver(); // create instance of chromeDriver and assign to WebDriver ref. variable
 
         }
 
-       driver.get(url); // open this url
+        if(url.equalsIgnoreCase("qa")) {
+            driver.get(qaURL); // open this url
+        }
+        else if(url.equalsIgnoreCase("uat")){
+            driver.get("");
+        }
        driver.manage().window().maximize(); // maximizing the window
 
+        String log4jConfPath = "log4j.properties";
+        PropertyConfigurator.configure(log4jConfPath);
     }
 
 

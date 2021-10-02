@@ -1,0 +1,38 @@
+2021-10-02 20:01:24,955 - excelReader.FilloUtility -INFO - I am in ExcelReader
+2021-10-02 20:01:24,955 [main] INFO excelReader.FilloUtility - I am in ExcelReader
+2021-10-02 20:01:24,958 - testCases_Login.TC_Login -INFO - Username is: admin
+2021-10-02 20:01:24,958 [main] INFO testCases_Login.TC_Login - Username is: admin
+2021-10-02 20:01:26,627 - testCases_Login.TC_Login -INFO - Error Message: Invalid credentials
+2021-10-02 20:01:26,627 [main] INFO testCases_Login.TC_Login - Error Message: Invalid credentials
+2021-10-02 20:02:50,156 - excelReader.FilloUtility -INFO - I am in ExcelReader
+2021-10-02 20:02:50,156 [main] INFO excelReader.FilloUtility - I am in ExcelReader
+2021-10-02 20:02:50,162 - testCases_Login.TC_Login -INFO - Username is: admin
+2021-10-02 20:02:50,162 [main] INFO testCases_Login.TC_Login - Username is: admin
+2021-10-02 20:02:52,181 - testCases_Login.TC_Login -INFO - Error Message: Invalid credentials
+2021-10-02 20:02:52,181 [main] INFO testCases_Login.TC_Login - Error Message: Invalid credentials
+2021-10-02 20:02:52,387 - testCases_Login.TC_Login -ERROR - this is error msg
+2021-10-02 20:02:52,387 [main] ERROR testCases_Login.TC_Login - this is error msg
+2021-10-02 20:20:35,347 - excelReader.FilloUtility -INFO - I am in ExcelReader
+2021-10-02 20:20:35,347 [main] INFO excelReader.FilloUtility - I am in ExcelReader
+2021-10-02 20:20:35,350 - testCases_Login.TC_Login -INFO - Username is: admin
+2021-10-02 20:20:35,350 [main] INFO testCases_Login.TC_Login - Username is: admin
+2021-10-02 20:20:36,977 - testCases_Login.TC_Login -INFO - Error Message: Invalid credentials
+2021-10-02 20:20:36,977 [main] INFO testCases_Login.TC_Login - Error Message: Invalid credentials
+2021-10-02 20:20:37,197 - testCases_Login.TC_Login -ERROR - this is error msg
+2021-10-02 20:20:37,197 [main] ERROR testCases_Login.TC_Login - this is error msg
+2021-10-02 20:35:27,606 - excelReader.FilloUtility -INFO - I am in ExcelReader
+2021-10-02 20:35:27,606 [main] INFO excelReader.FilloUtility - I am in ExcelReader
+2021-10-02 20:35:27,611 - testCases_Login.TC_Login -INFO - Username is: admin
+2021-10-02 20:35:27,611 [main] INFO testCases_Login.TC_Login - Username is: admin
+2021-10-02 20:35:29,360 - testCases_Login.TC_Login -INFO - Error Message: Invalid credentials
+2021-10-02 20:35:29,360 [main] INFO testCases_Login.TC_Login - Error Message: Invalid credentials
+2021-10-02 20:35:29,575 - testCases_Login.TC_Login -ERROR - this is error msg
+2021-10-02 20:35:29,575 [main] ERROR testCases_Login.TC_Login - this is error msg
+2021-10-02 20:41:17,649 - excelReader.FilloUtility -INFO - I am in ExcelReader
+2021-10-02 20:41:17,649 [main] INFO excelReader.FilloUtility - I am in ExcelReader
+2021-10-02 20:41:17,654 - testCases_Login.TC_Login -INFO - Username is: admin
+2021-10-02 20:41:17,654 [main] INFO testCases_Login.TC_Login - Username is: admin
+2021-10-02 20:41:19,283 - testCases_Login.TC_Login -INFO - Error Message: Invalid credentials
+2021-10-02 20:41:19,283 [main] INFO testCases_Login.TC_Login - Error Message: Invalid credentials
+2021-10-02 20:41:19,481 - testCases_Login.TC_Login -ERROR - this is error msg
+2021-10-02 20:41:19,481 [main] ERROR testCases_Login.TC_Login - this is error msg

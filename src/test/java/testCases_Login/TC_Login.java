@@ -1,13 +1,12 @@
 package testCases_Login;
 
+import PageClasses.LoginPageClass;
 import com.codoid.products.exception.FilloException;
 import excelReader.FilloUtility;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Listeners;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import screenShot.ScreenshotTaken;
 import testBase.BaseClass;
 
@@ -16,8 +15,8 @@ import java.util.ArrayList;
 @Listeners(listeners.TestListener.class)
 public class TC_Login extends BaseClass {
 
-    static String browser = "chrome";
-    static String url = "https://opensource-demo.orangehrmlive.com/";
+    public static final Logger log = Logger.getLogger(TC_Login.class.getName());
+
     static ArrayList<String> loginValues = new ArrayList<>();
     FilloUtility fu;
     String filepath=System.getProperty("user.dir") + "\\Resources\\DataManager\\";
@@ -26,9 +25,11 @@ public class TC_Login extends BaseClass {
     String Password;
     String expectedErrorMessage ="Invalid credentials";
     ScreenshotTaken st;
+    LoginPageClass login;
 
+    @Parameters({"browser", "url"})
     @BeforeTest
-    public void preCondition(){
+    public void preCondition(String browser, String url){
 
         init(browser, url);
     }
@@ -40,19 +41,18 @@ public class TC_Login extends BaseClass {
         loginValues = fu.getData(filepath, excelName, "login", 1, "TestNumber");
         Username = loginValues.get(0);
         Password = loginValues.get(1);
-        System.out.println(Username);
-        System.out.println(Password);
-        driver.findElement(By.id("txtUsername")).sendKeys(Username);
-        driver.findElement(By.id("txtPassword")).sendKeys(Password);
-        driver.findElement(By.id("btnLogin")).click();
+        log.info("Username is: "+ Username);
+        login = new LoginPageClass(driver);
+        String errorMsg = login.loginInto(Username, Password);
+        log.info("Error Message: "+ errorMsg);
         st = new ScreenshotTaken();
         st.getScreenShot(driver, "TC_Login_01_Negative");
-        String errorMsg = driver.findElement(By.xpath("//span[text()='Invalid credentials']")).getText();
-       fu.updateData(filepath, "loginData.xlsx", "login", 1, "result",  errorMsg);
+        log.error("this is error msg");
+        fu.updateData(filepath, "loginData.xlsx", "login", 1, "result",  errorMsg);
         Assert.assertEquals(errorMsg, expectedErrorMessage);
     }
 
-    @Test
+    @Test(enabled=false)
     public void testTC_Login_02_Negative() throws FilloException {
 
         fu = new FilloUtility();
